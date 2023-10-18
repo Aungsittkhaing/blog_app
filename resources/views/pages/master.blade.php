@@ -8,21 +8,22 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                @include('pages.header')
-            </div>
-            <div class="col-12 col-md-3">
-                @include('pages.nav')
-            </div>
-            <div class="col-12 col-md-9">
-                @yield('content')
-            </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            @include('pages.header')
+        </div>
+        <div class="col-12 col-md-2 my-5">
+            @include('pages.nav')
+        </div>
+        <div class="col-12 col-md-9">
+            @yield('content')
         </div>
     </div>
+</div>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

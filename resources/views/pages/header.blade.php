@@ -52,10 +52,23 @@
                         <i class="bi bi-person-fill"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Setting</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li>
-                            <a class="dropdown-item" href="#">Help & Information</a>
+                            <a class="dropdown-item" href="#">
+                                <i class="bi bi-gear-fill"></i>
+                                Setting
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="bi bi-person-fill"></i>
+                                Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="bi bi-question-circle-fill"></i>
+                                Help & Support
+                            </a>
                         </li>
                     </ul>
                 </li>

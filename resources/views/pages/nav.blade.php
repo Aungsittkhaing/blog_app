@@ -1,0 +1,83 @@
+<div class="col-12 vh-100 sidebar my-2">
+    <div class="main-menu">
+        <div class="nav-menu">
+            <ul>
+
+                <li class="menu-item">
+                    <a href="" class="menu-item-link">
+                            <span>
+                                <i class="bi bi-house-fill"></i>
+                                Home
+                            </span>
+                    </a>
+                </li>
+
+{{--                <li class="menu-spacer"></li>--}}
+            </ul>
+        </div>
+
+        <div class="nav-menu">
+            <ul>
+                <li class="menu-title">
+                    <span>Manage Items</span>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-item-link">
+                            <span>
+                                <i class="bi bi-box2-fill"></i>
+                                Create Items
+                            </span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-item-link">
+                            <span>
+                                <i class="bi bi-list"></i>
+                                Item Lists
+                            </span>
+                        <span class="badge badge-pill bg-white text-primary shadow-sm p-1">
+                        </span>
+                    </a>
+
+                <li class="menu-title">
+                    <span>Manage Category</span>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-item-link">
+                            <span>
+                                <i class="bi bi-bag-fill"></i>
+                                Create Category
+                            </span>
+{{--                        <span class="badge badge-pill bg-white text-primary shadow-sm p-1">--}}
+{{--                            --}}
+{{--                        </span>--}}
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="" class="menu-item-link">
+                            <span>
+                                <i class="bi bi-list"></i>
+                                Category Lists
+                            </span>
+{{--                        <span class="badge badge-pill bg-white text-primary shadow-sm p-1">--}}
+
+{{--                        </span>--}}
+                    </a>
+                </li>
+                <li class="menu-spacer"></li>
+                <li class="menu-item">
+                    <a href="" class="btn btn-danger w-100">
+                            <span>
+                                <i class="bi bi-lock-fill"></i>
+                                Log Out
+                            </span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+
+    </div>
+</div>
