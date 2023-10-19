@@ -22,7 +22,7 @@
                     <span>Manage Items</span>
                 </li>
                 <li class="menu-item">
-                    <a href="" class="menu-item-link">
+                    <a href="{{ route('item.create') }}" class="menu-item-link">
                             <span>
                                 <i class="bi bi-box2-fill"></i>
                                 Create Items
@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="" class="menu-item-link">
+                    <a href="{{ route('item.index') }}" class="menu-item-link">
                             <span>
                                 <i class="bi bi-list"></i>
                                 Item Lists
