@@ -13,7 +13,7 @@
         <a
             class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
             href="#"
-        >Ask Shop</a
+        >Blog App</a
         >
         <button
             class="navbar-toggler"

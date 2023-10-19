@@ -4,7 +4,7 @@
             <ul>
 
                 <li class="menu-item">
-                    <a href="" class="menu-item-link">
+                    <a href="{{ route('home') }}" class="menu-item-link">
                             <span>
                                 <i class="bi bi-house-fill"></i>
                                 Home
