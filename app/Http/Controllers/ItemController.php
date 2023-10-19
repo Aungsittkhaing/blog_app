@@ -35,7 +35,7 @@ class ItemController extends Controller
         $item->price = $request->price;
         $item->stock = $request->stock;
         $item->save();
-        return redirect()->route('item.index');
+        return redirect()->route('item.index')->with('status', 'Item is added😊');
     }
 
     /**
@@ -43,7 +43,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-
+        return view('inventory.show', compact('item'));
     }
 
     /**
@@ -51,7 +51,7 @@ class ItemController extends Controller
      */
     public function edit(Item $item)
     {
-        //
+        return view('inventory.edit', compact('item'));
     }
 
     /**
@@ -59,7 +59,11 @@ class ItemController extends Controller
      */
     public function update(UpdateItemRequest $request, Item $item)
     {
-        //
+        $item->name = $request->name;
+        $item->price = $request->price;
+        $item->stock = $request->stock;
+        $item->update();
+        return redirect()->route('item.index')->with('status', 'item is updated😊');
     }
 
     /**
@@ -67,6 +71,7 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+        $item->delete();
+        return redirect()->back()->with('status', 'item is deleted😊');
     }
 }

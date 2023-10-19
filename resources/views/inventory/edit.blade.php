@@ -1,0 +1,27 @@
+@extends('pages.master')
+@section('title')
+    Edit Page
+@endsection
+@section('content')
+    <form action="{{ route('item.update', $item->id) }}" method="post" class="mt-5 pt-3">
+        @method('put')
+        @csrf
+        <div class="card">
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label">Item Name</label>
+                    <input type="text" value="{{ old('name', $item->name) }}" name="name" class="form-control" placeholder="like apple,orange,etc">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Item Price</label>
+                    <input type="number" value="{{ old('price', $item->price) }}" name="price" class="form-control" placeholder="like 1000, 2000, etc">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Stock</label>
+                    <input type="number" value="{{ old('stock', $item->stock) }}" name="stock" class="form-control" placeholder="like 1,2,3,4,etc">
+                </div>
+                <button class="btn btn-info">Update</button>
+            </div>
+        </div>
+    </form>
+@endsection
