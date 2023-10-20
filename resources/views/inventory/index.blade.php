@@ -34,10 +34,10 @@
                         <a href="{{ route('item.edit', $item->id) }}" class="btn btn-sm btn-outline-warning">
                             <i class="bi bi-pencil-square"></i>
                         </a>
-                        <form action="{{ route('item.destroy', $item->id) }}" class="d-inline-block" method="post">
+                        <form action="{{ route('item.destroy', $item->id) }}" class="d-inline-block"  method="post">
                             @method('delete')
                             @csrf
-                            <button class="btn btn-outline-danger btn-sm">
+                            <button class="btn btn-sm btn-outline-danger" onclick="return confirm('Are you sure to delete?')">
                                 <i class="bi bi-trash2"></i>
                             </button>
                         </form>

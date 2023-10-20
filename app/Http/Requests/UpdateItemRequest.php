@@ -21,8 +21,12 @@ class UpdateItemRequest extends FormRequest
      */
     public function rules(): array
     {
+        //if the name is same,it can't update
+        $id = request()->item->id;
         return [
-            //
+            "name" => "required|min:3|max:50|unique:items,name,$id",
+            "price" => "required|numeric|gte:50",
+            "stock" => "required|numeric|gt:3"
         ];
     }
 }
