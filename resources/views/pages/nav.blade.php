@@ -44,7 +44,7 @@
                     <span>Manage Category</span>
                 </li>
                 <li class="menu-item">
-                    <a href="" class="menu-item-link">
+                    <a href="{{ route('category.create') }}" class="menu-item-link">
                             <span>
                                 <i class="bi bi-bag-fill"></i>
                                 Create Category
@@ -56,7 +56,7 @@
                 </li>
 
                 <li class="menu-item">
-                    <a href="" class="menu-item-link">
+                    <a href="{{ route('category.index') }}" class="menu-item-link">
                             <span>
                                 <i class="bi bi-list"></i>
                                 Category Lists

@@ -1,6 +1,6 @@
 @extends('pages.master')
 @section('title')
-    Create Page
+    Create Item
 @endsection
 @section('content')
     <form action="{{ route('item.store') }}" method="post" class="mt-5 pt-3">

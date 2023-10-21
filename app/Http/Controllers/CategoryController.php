@@ -13,7 +13,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::paginate(7)->withQueryString();
+        return view('category.index', compact('categories'));
     }
 
     /**
@@ -21,7 +22,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('category.create');
     }
 
     /**
@@ -29,7 +30,12 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        //
+        $category = new Category();
+        $category->title = $request->title;
+        $category->description = $request->description;
+        $category->save();
+
+        return redirect()->route('category.index')->with('status', 'Category is added😊');
     }
 
     /**
@@ -37,7 +43,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return view('category.show', compact('category'));
     }
 
     /**
@@ -45,7 +51,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('category.edit', compact('category'));
     }
 
     /**
@@ -53,7 +59,10 @@ class CategoryController extends Controller
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        //
+        $category->title = $request->title;
+        $category->description = $request->description;
+        $category->update();
+        return redirect()->route('category.index')->with('status', 'Category is updated😊');
     }
 
     /**
@@ -61,6 +70,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return redirect()->back()->with('status', 'category is deleted😊');
     }
 }

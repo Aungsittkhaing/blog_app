@@ -1,6 +1,6 @@
 @extends('pages.master')
 @section('title')
-    Index Page
+    Item List
 @endsection
 @section('content')
     <div class="mt-5 pt-4">

@@ -1,6 +1,6 @@
 @extends('pages.master')
 @section('title')
-    Edit Page
+    Edit Item
 @endsection
 @section('content')
     <form action="{{ route('item.update', $item->id) }}" method="post" class="mt-5 pt-3">
