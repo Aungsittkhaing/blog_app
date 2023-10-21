@@ -4,7 +4,9 @@
 @endsection
 @section('content')
     <div class="mt-5 pt-4">
-        <h4>Category Lists</h4>
+        <h4>
+            Category Lists
+        </h4>
         @if(session('status'))
             <div class="alert alert-success">
                 {{ session('status') }}
@@ -14,7 +16,18 @@
             <thead>
             <tr>
                 <td>#</td>
-                <td>title</td>
+                <td>
+                    title
+                    <a href="{{ route('category.index', ['title' => 'asc']) }}" class="btn btn-outline-primary">
+                        <i class="bi bi-arrow-bar-up"></i>
+                    </a>
+                    <a href="{{ route('category.index', ['title' => 'desc']) }}" class="btn btn-outline-primary">
+                        <i class="bi bi-arrow-bar-down"></i>
+                    </a>
+                    <a href="{{ route('category.index') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-x-circle"></i>
+                    </a>
+                </td>
                 <td>description</td>
                 <td>Control</td>
             </tr>

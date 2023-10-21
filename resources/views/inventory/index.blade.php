@@ -4,7 +4,12 @@
 @endsection
 @section('content')
     <div class="mt-5 pt-4">
-        <h4>Item Lists</h4>
+        <h4>
+            Item Lists
+            @if(request()->has('keyword'))
+                [Search result by '{{ request()->keyword }}']
+            @endif
+        </h4>
         @if(session('status'))
             <div class="alert alert-success">
                 {{ session('status') }}
@@ -14,7 +19,18 @@
             <thead>
             <tr>
                 <td>#</td>
-                <td>Name</td>
+                <td>
+                    Name
+                    <a href="{{ route('item.index', ['name' => 'asc']) }}" class="btn btn-outline-primary">
+                        <i class="bi bi-arrow-bar-up"></i>
+                    </a>
+                    <a href="{{ route('item.index', ['name' => 'desc']) }}" class="btn btn-outline-primary">
+                        <i class="bi bi-arrow-bar-down"></i>
+                    </a>
+                    <a href="{{ route('item.index') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-x-circle"></i>
+                    </a>
+                </td>
                 <td>Price</td>
                 <td>Stock</td>
                 <td>Control</td>

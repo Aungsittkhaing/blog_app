@@ -18,15 +18,21 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="topHeaderBar">
-            <form class="d-flex ms-auto my-3 my-lg-0">
+            <form action="{{ route('item.index') }}" method="get" class="d-flex ms-auto my-3 my-lg-0">
                 <div class="input-group">
                     <input
                         class="form-control"
                         type="search"
                         placeholder="Search"
-                        aria-label="Search"
-                    />
-                    <button class="btn btn-primary" type="submit">
+                        name="keyword"
+                        @if(request()->has('keyword')) value="{{ request()->keyword }}" @endif/>
+                    @if(request()->has('keyword'))
+                        <a href="{{ route('item.index') }}" class="btn btn-danger">
+                            <i class="bi bi-x-circle"></i>
+                        </a>
+                    @endif
+
+                    <button class="btn btn-primary">
                         <i class="bi bi-search"></i>
                     </button>
                 </div>

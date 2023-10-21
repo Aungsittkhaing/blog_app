@@ -13,7 +13,11 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::paginate(7)->withQueryString();
+        $categories = Category::when(request()->has('title'), function ($query) {
+            $sortType = request()->title ?? 'asc';
+            $query->orderBy('title', $sortType);
+        })
+            ->paginate(7)->withQueryString();
         return view('category.index', compact('categories'));
     }
 
