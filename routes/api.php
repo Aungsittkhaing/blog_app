@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoryApiController;
 use App\Http\Controllers\ItemApiController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 Route::apiResource('item', ItemApiController::class);
+Route::apiResource('category', CategoryApiController::class);
