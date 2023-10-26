@@ -30,7 +30,7 @@ class StoreItemRequest extends FormRequest
     public function messages(): array
     {
         return [
-          "name.required" => "နာမည်မထည့်ဟ😒"
+            "name.required" => "နာမည်ထည့်ဟ😒"
         ];
     }
 }
