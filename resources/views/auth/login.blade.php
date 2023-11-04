@@ -45,6 +45,7 @@
                         <div class="mb-3">
                             <a href="{{ route('auth.register') }}" class="btn btn-info btn-sm">Register</a>
                             <button class="btn btn-outline-info btn-sm">Login</button>
+                            <a href="{{ route('auth.forgot') }}" class="btn btn-link">Forgot Password</a>
                         </div>
                     </form>
                 </div>

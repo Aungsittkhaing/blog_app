@@ -39,6 +39,11 @@ Route::controller(AuthController::class)->group(function () {
         Route::post('register', 'store')->name('auth.store');
         Route::get('login', 'login')->name('auth.login');
         Route::post('login', 'check')->name('auth.check');
+
+        Route::get('forgot', 'forgot')->name('auth.forgot');
+        Route::post('check-email', 'checkEmail')->name('auth.checkEmail');
+        Route::get('new-password', 'newPassword')->name('auth.newPassword');
+        Route::post('reset-password', 'resetPassword')->name('auth.resetPassword');
     });
     Route::middleware(isAuthenticated::class)->group(function () {
         Route::post('logout', 'logout')->name('auth.logout');

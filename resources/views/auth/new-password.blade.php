@@ -1,6 +1,6 @@
 @extends('pages.master')
 @section('title')
-    Change Password
+    New Password
 @endsection
 @section('content')
     <div class="row justify-content-center align-items-center min-vh-90">
@@ -9,23 +9,13 @@
                 <div class="card-body">
                     <h4 class="text-center text-info">
                         <i class="bi bi-lock"></i>
-                        Change Password
+                        New Password
                     </h4>
                     <hr>
 
-                    <form action="{{ route('auth.passwordChanging') }}" method="post">
+                    <form action="{{ route('auth.resetPassword') }}" method="post">
                         @csrf
-                        <div class="mb-3">
-                            <label for="">
-                                <i class="bi bi-lock-fill text-info"></i>
-                                Current Password
-                            </label>
-                            <input type="password" name="current_password" value="{{ old('current_password') }}"
-                                class="form-control @error('current_password')is-invalid @enderror">
-                            @error('current_password')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
+                        <input type="hidden" name="user_token" value="{{ $user_token }}">
                         <div class="mb-3">
                             <label for="">
                                 <i class="bi bi-lock-fill text-info"></i>
@@ -49,7 +39,7 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-outline-info btn-sm">Change Now</button>
+                            <button class="btn btn-outline-info btn-sm">Reset Now</button>
                         </div>
                     </form>
                 </div>
