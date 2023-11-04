@@ -3,7 +3,7 @@
     Category Details
 @endsection
 @section('content')
-    <div class="mt-5 pt-4">
+    <div class="mt-3">
         <h4>Category Details</h4>
         <table class="table table-primary table-bordered">
             <tr class="text-center">

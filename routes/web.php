@@ -8,6 +8,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PageController;
 use App\Http\Middleware\isAuthenticated;
 use App\Http\Middleware\isNotAuthenticated;
+use App\Http\Middleware\isVerified;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +25,10 @@ Route::middleware(isAuthenticated::class)->group(function () {
     Route::controller(HomeController::class)->prefix('dashboard')->group(function () {
         Route::get('home', 'home')->name('dashboard.home');
     });
-    Route::resource('item', ItemController::class);
-    Route::resource('category', CategoryController::class);
+    Route::middleware(isVerified::class)->group(function () {
+        Route::resource('item', ItemController::class);
+        Route::resource('category', CategoryController::class);
+    });
 });
 Route::get('/', [PageController::class, 'home'])->name('home');
 
@@ -39,7 +42,11 @@ Route::controller(AuthController::class)->group(function () {
     });
     Route::middleware(isAuthenticated::class)->group(function () {
         Route::post('logout', 'logout')->name('auth.logout');
-        Route::get('password-change', 'passwordChange')->name('auth.passwordChange');
-        Route::post('password-change', 'passwordChanging')->name('auth.passwordChanging');
+        Route::middleware(isVerified::class)->group(function () {
+            Route::get('password-change', 'passwordChange')->name('auth.passwordChange');
+            Route::post('password-change', 'passwordChanging')->name('auth.passwordChanging');
+        });
+        Route::get('verify', 'verify')->name('auth.verify');
+        Route::post('verify', 'verifying')->name('auth.verifying');
     });
 });
