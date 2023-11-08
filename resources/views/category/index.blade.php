@@ -3,7 +3,7 @@
     Category List
 @endsection
 @section('content')
-    <div class="mt-3">
+    <div class="mt-3 p-2">
         <h4>
             Category Lists
         </h4>

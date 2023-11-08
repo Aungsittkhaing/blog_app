@@ -7,7 +7,7 @@
         <div class="col-5">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="text-center text-info">
+                    <h4 class="text-center text-primary">
                         <i class="bi bi-lock"></i>
                         New Password
                     </h4>
@@ -18,7 +18,7 @@
                         <input type="hidden" name="user_token" value="{{ $user_token }}">
                         <div class="mb-3">
                             <label for="">
-                                <i class="bi bi-lock-fill text-info"></i>
+                                <i class="bi bi-lock-fill text-primary"></i>
                                 New Password
                             </label>
                             <input type="password" name="password" value="{{ old('password') }}"
@@ -29,7 +29,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="">
-                                <i class="bi bi-lock-fill text-info"></i>
+                                <i class="bi bi-lock-fill text-primary"></i>
                                 Confirm Password
                             </label>
                             <input type="password" name="password_confirmation" value="{{ old('password_confirmation') }}"
@@ -39,7 +39,7 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-outline-info btn-sm">Reset Now</button>
+                            <button class="btn btn-outline-primary btn-sm">Reset Now</button>
                         </div>
                     </form>
                 </div>

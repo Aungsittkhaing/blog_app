@@ -3,7 +3,7 @@
     Item List
 @endsection
 @section('content')
-    <div class="mt-3">
+    <div class="mt-3 p-2">
         <h4>
             Item Lists
             @if (request()->has('keyword'))

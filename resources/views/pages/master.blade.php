@@ -21,7 +21,7 @@
             <div class="col-12 col-md-2 my-5">
                 @include('pages.nav')
             </div>
-            <div class="container col-12 col-md-10 mt-5 pt-4">
+            <div class="container col-12 col-md-10 mt-3 pt-4">
                 @include('pages.mail-verify-noti')
                 @yield('content')
             </div>

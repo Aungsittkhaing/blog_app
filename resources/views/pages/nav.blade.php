@@ -66,36 +66,6 @@
                         </a>
                     </li>
 
-
-                    <li class="menu-title">
-                        <span>User Profile</span>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="menu-item-link">
-                            <span>
-                                <i class="bi bi-person-circle"></i>
-                                My Profile
-                            </span>
-                            {{--                        <span class="badge badge-pill bg-white text-primary shadow-sm p-1"> --}}
-                            {{--                            --}}
-                            {{--                        </span> --}}
-                        </a>
-                    </li>
-
-                    <li class="menu-item">
-                        <a href="{{ route('auth.passwordChange') }}" class="menu-item-link">
-                            <span>
-                                <i class="bi bi-lock-fill"></i>
-                                Change Password
-                            </span>
-                            {{--                        <span class="badge badge-pill bg-white text-primary shadow-sm p-1"> --}}
-
-                            {{--                        </span> --}}
-                        </a>
-                    </li>
-
-
-
                     <li class="menu-spacer"></li>
                     <li class="menu-item">
                         <form action="{{ route('auth.logout') }}" method="post">

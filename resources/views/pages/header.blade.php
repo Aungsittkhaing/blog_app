@@ -34,9 +34,9 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="{{ route('auth.passwordChange') }}">
                                     <i class="bi bi-gear-fill"></i>
-                                    Setting
+                                    Change Password
                                 </a>
                             </li>
                             <li>

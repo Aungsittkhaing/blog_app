@@ -3,7 +3,7 @@
     Edit Category
 @endsection
 @section('content')
-    <form action="{{ route('category.update', $category->id) }}" method="post" class="mt-3">
+    <form action="{{ route('category.update', $category->id) }}" method="post" class="mt-3 p-2">
         @method('put')
         @csrf
         <div class="card">

@@ -5,7 +5,7 @@ charts.forEach(function (chart) {
   var myChart = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      labels: ["Myanmar", "English", "Maths", "Chemistry", "Physics", "Biology"],
       datasets: [
         {
           label: "# of Votes",

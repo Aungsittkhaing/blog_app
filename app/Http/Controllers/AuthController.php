@@ -116,7 +116,7 @@ class AuthController extends Controller
 
         //mailing step
         logger("your password reset link is " . $link);
-        return redirect()->route('auth.login')->with("message", "email reset link has been send");
+        return redirect()->route('auth.login')->with("message", "email reset link has been sent");
     }
     public function newPassword(Request $request)
     {

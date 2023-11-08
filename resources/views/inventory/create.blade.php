@@ -3,7 +3,7 @@
     Create Item
 @endsection
 @section('content')
-    <form action="{{ route('item.store') }}" method="post" class="mt-3">
+    <form action="{{ route('item.store') }}" method="post" class="mt-3 p-2">
         @csrf
         <div class="card">
             <div class="card-body">

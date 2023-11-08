@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('password');
             $table->integer('verify_code')->nullable();
             $table->dateTime('email_verified_at')->nullable();
-            $table->string("user_token");
+            $table->string("user_token")->nullable();
             $table->timestamps();
         });
     }

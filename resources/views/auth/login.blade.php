@@ -12,7 +12,7 @@
             @endif
             <div class="card">
                 <div class="card-body">
-                    <h4 class="text-center text-info">
+                    <h4 class="text-center text-primary">
                         <i class="bi bi-people"></i>
                         Student Login
                     </h4>
@@ -22,7 +22,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="">
-                                <i class="bi bi-envelope-fill text-info"></i>
+                                <i class="bi bi-envelope-fill text-primary"></i>
                                 Your Email
                             </label>
                             <input type="email" name="email" value="{{ old('email') }}"
@@ -33,7 +33,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="">
-                                <i class="bi bi-lock-fill text-info"></i>
+                                <i class="bi bi-lock-fill text-primary"></i>
                                 Your Password
                             </label>
                             <input type="password" name="password" value="{{ old('password') }}"
@@ -43,8 +43,8 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <a href="{{ route('auth.register') }}" class="btn btn-info btn-sm">Register</a>
-                            <button class="btn btn-outline-info btn-sm">Login</button>
+                            <a href="{{ route('auth.register') }}" class="btn btn-primary btn-sm">Register</a>
+                            <button class="btn btn-outline-primary btn-sm">Login</button>
                             <a href="{{ route('auth.forgot') }}" class="btn btn-link">Forgot Password</a>
                         </div>
                     </form>

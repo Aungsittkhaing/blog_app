@@ -7,7 +7,7 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="text-center text-info">
+                    <h4 class="text-center text-primary">
                         <i class="bi bi-people"></i>
                         Student Register
                     </h4>
@@ -17,7 +17,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="">
-                                <i class="bi bi-person-fill text-info"></i>
+                                <i class="bi bi-person-fill text-primary"></i>
                                 Your Name
                             </label>
                             <input type="text" class="form-control @error('name')is-invalid @enderror" name="name"
@@ -28,7 +28,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="">
-                                <i class="bi bi-envelope-fill text-info"></i>
+                                <i class="bi bi-envelope-fill text-primary"></i>
                                 Your Email
                             </label>
                             <input type="email" name="email" value="{{ old('email') }}"
@@ -39,7 +39,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="">
-                                <i class="bi bi-lock-fill text-info"></i>
+                                <i class="bi bi-lock-fill text-primary"></i>
                                 Your Password
                             </label>
                             <input type="password" name="password"
@@ -50,7 +50,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="">
-                                <i class="bi bi-lock-fill text-info"></i>
+                                <i class="bi bi-lock-fill text-primary"></i>
                                 Your Confirm Password
                             </label>
                             <input type="password" name="password_confirmation"
@@ -60,8 +60,8 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-info btn-sm">Register</button>
-                            <a href="{{ route('auth.login') }}" class="btn btn-outline-info btn-sm">Sign In</a>
+                            <button class="btn btn-primary btn-sm">Register</button>
+                            <a href="{{ route('auth.login') }}" class="btn btn-outline-primary btn-sm">Sign In</a>
                         </div>
                     </form>
                 </div>

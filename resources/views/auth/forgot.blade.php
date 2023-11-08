@@ -7,7 +7,7 @@
         <div class="col-5">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="text-center text-info">
+                    <h4 class="text-center text-primary">
                         <i class="bi bi-check2-circle"></i>
                         Forgot Password
                     </h4>
@@ -17,7 +17,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="">
-                                <i class="bi bi-envelope-fill text-info"></i>
+                                <i class="bi bi-envelope-fill text-primary"></i>
                                 Enter Your Email
                             </label>
                             <input type="email" name="email" value="{{ old('email') }}"
@@ -27,7 +27,7 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-outline-info btn-sm">Reset</button>
+                            <button class="btn btn-outline-primary btn-sm">Reset</button>
                         </div>
                     </form>
                 </div>
